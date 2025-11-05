@@ -2,7 +2,8 @@ import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-const DEV_SPLINE_URL = 'https://prod.spline.design/6YVwBEm90LkAMPxS/scene.splinecode';
+// System-provided Spline asset: interactive loading animation
+const DEV_SPLINE_URL = 'https://prod.spline.design/igThmltzmqv5hkWo/scene.splinecode';
 
 const Hero = () => {
   return (
@@ -11,7 +12,8 @@ const Hero = () => {
         <Spline scene={DEV_SPLINE_URL} style={{ width: '100%', height: '100%' }} />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,24,39,0)_0%,rgba(17,24,39,0.2)_40%,rgba(17,24,39,0.65)_65%,rgba(17,24,39,0.9)_100%)]" />
+      {/* Non-blocking gradient overlay for contrast */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(2,6,23,0)_0%,rgba(2,6,23,0.25)_42%,rgba(2,6,23,0.65)_68%,rgba(2,6,23,0.92)_100%)]" />
 
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
